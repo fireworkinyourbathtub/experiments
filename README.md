@@ -6,4 +6,4 @@ Sometimes I write songs, and these are all of them. They are all numbered and al
 
 There is a list of them in [TRACKS.md](TRACKS.md)
 
-PYYaml is needed to run the tracklist generation script.
+PyYAML is needed to run the tracklist generation script.
