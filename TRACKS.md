@@ -5,3 +5,4 @@
 |1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|GarageBand|[file](experiments/mastitgfl/files/mastitgfl.mp3)||
 |2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|GarageBand||[file](experiments/mastitgfl3/files/mastitgfl3.aiff)|
 |3|[Fades](experiments/fade)|no|GarageBand|||
+|4|[Chicken](experiments/chicken)|no|GarageBand|||
