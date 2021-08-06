@@ -92,6 +92,7 @@ def export_table(tracks):
 
     rows = [header_row, delimiter_row]
 
+    # TODO: add track length to table
     for (_, track) in sorted(tracks.items(), key=lambda x: x[0]):
         track_readme_path = os.path.join(EXPERIMENTS_DIR, track.dir_name)
         row_beginning = f'{track.number}|[{track.name}]({track_readme_path})|{"yes" if track.finished else "no"}|{track.made_with}'
