@@ -85,7 +85,7 @@ def export_table(tracks):
     rows = [header_row, delimiter_row]
 
     for (_, track) in sorted(tracks.items(), key=lambda x: x[0]):
-        row_beginning = f'{track.number}|{track.name}|{track.finished}|{track.made_with}'
+        row_beginning = f'{track.number}|{track.name}|{"yes" if track.finished else "no"}|{track.made_with}'
         row_files = '|'.join([f'[file]({os.path.join(EXPERIMENTS_DIR, track.dir_name, "files", track.files[cl])})' if cl in track.files else '' for cl in file_cls])
         rows.append(f'|{row_beginning}|{row_files}|\n')
 
