@@ -80,7 +80,7 @@ def generate_readme(track):
     with open(os.path.join(EXPERIMENTS_DIR, track.dir_name, 'README.md'), 'w') as f:
         f.write((f'# {track.name}\n'
                   '\n'
-                 f'{track.description}\n'))
+                 f'{track.description}'))
 
 
 def export_table(tracks):
