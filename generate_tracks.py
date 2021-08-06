@@ -1,6 +1,6 @@
 import os
 import sys
-import json
+import yaml
 
 EXPERIMENTS_DIR = 'experiments'
 
@@ -12,7 +12,7 @@ ext_classifications = {
 class Track:
     def __init__(self, dir_name):
         self.dir_name = dir_name
-        self.metadata_file = os.path.join(EXPERIMENTS_DIR, dir_name, "metadata.json")
+        self.metadata_file = os.path.join(EXPERIMENTS_DIR, dir_name, "metadata.yaml")
         self.file_paths = os.listdir(os.path.join(EXPERIMENTS_DIR, dir_name, "files"))
         self.files = {}
 
@@ -22,7 +22,7 @@ class Track:
     def read_metadata(self):
         try:
             with open(self.metadata_file, 'r') as f:
-                metadata = json.load(f)
+                metadata = yaml.full_load(f)
 
                 def read_from_metadata(key):
                     if key in metadata:
@@ -34,6 +34,7 @@ class Track:
                 self.number = read_from_metadata('number')
                 self.made_with = read_from_metadata('made-with')
                 self.finished = read_from_metadata('finished')
+                self.description = read_from_metadata('description')
 
         except FileNotFoundError as exc:
             raise Exception(f"track '{self.dir_name}' is missing metadata file at '{self.metadata_file}'")
@@ -75,6 +76,13 @@ def check_track_keys(tracks):
 
         last_key = i
 
+def generate_readme(track):
+    with open(os.path.join(EXPERIMENTS_DIR, track.dir_name, 'README.md'), 'w') as f:
+        f.write((f'# {track.name}\n'
+                  '\n'
+                 f'{track.description}\n'))
+
+
 def export_table(tracks):
     file_cls = list(ext_classifications.values())
     cols = ['Number', 'Name', 'Finished', 'Made with'] + file_cls
@@ -85,7 +93,8 @@ def export_table(tracks):
     rows = [header_row, delimiter_row]
 
     for (_, track) in sorted(tracks.items(), key=lambda x: x[0]):
-        row_beginning = f'{track.number}|{track.name}|{"yes" if track.finished else "no"}|{track.made_with}'
+        track_readme_path = os.path.join(EXPERIMENTS_DIR, track.dir_name)
+        row_beginning = f'{track.number}|[{track.name}]({track_readme_path})|{"yes" if track.finished else "no"}|{track.made_with}'
         row_files = '|'.join([f'[file]({os.path.join(EXPERIMENTS_DIR, track.dir_name, "files", track.files[cl])})' if cl in track.files else '' for cl in file_cls])
         rows.append(f'|{row_beginning}|{row_files}|\n')
 
@@ -93,6 +102,8 @@ def export_table(tracks):
         f.write('# Tracks\n\n')
         f.writelines(rows)
 
-t = read_tracks()
-check_track_keys(t)
-export_table(t)
+ts = read_tracks()
+check_track_keys(ts)
+for tr in ts.values():
+    generate_readme(tr)
+export_table(ts)
