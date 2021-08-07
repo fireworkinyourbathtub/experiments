@@ -124,7 +124,7 @@ def export_table(tracks):
 
     with open('README.md', 'w') as f:
         f.write(README_INFO)
-        f.write('# Tracks\n\n')
+        f.write('## Tracks\n\n')
         f.writelines(rows)
 
 ts = read_tracks()
