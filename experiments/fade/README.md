@@ -1,4 +1,7 @@
-# Fades
+# 3: Fades
+
+finished: yes
+made with GarageBand
 
 An experiment in the usage of crossfades.
 
@@ -8,3 +11,9 @@ Soon, everything disappears except fror the melody and the piano melody.
 The main melody gets swapped out for a different instrument, and the background piano melody is replaced with a different one.
 Then, everything crossfades into a section with rising notes, which then leads into a section with slower, more relaxed synths.
 Then, the synths are replaced with noise as a simple beat begins, which suddenly then ends, leading to a final section with the original melodies.
+
+
+[GarageBand multitrack project file](files/fade.band)
+
+[flac audio file](files/fade.flac)
+

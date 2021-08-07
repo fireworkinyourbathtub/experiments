@@ -49,7 +49,7 @@ class Track:
             ext_classification = ext_classifications[ext]
 
             if ext_classification in self.files:
-                raise Exception("track '{self.dir_name}' has two files classified as ext_classification")
+                raise Exception("track '{self.dir_name}' has two files classified as '{ext_classification}'")
             else:
                 self.files[ext_classification] = f
 
@@ -79,9 +79,16 @@ def check_track_keys(tracks):
 
 def generate_readme(track):
     with open(os.path.join(EXPERIMENTS_DIR, track.dir_name, 'README.md'), 'w') as f:
-        f.write((f'# {track.name}\n'
+        f.write((f'# {track.number}: {track.name}\n'
                   '\n'
-                 f'{track.description}'))
+                 f'finished: {"yes" if track.finished else "no"}\n'
+                 f'made with {track.made_with}\n'
+                  '\n'
+                 f'{track.description}\n'
+                  '\n'))
+
+        for fclass, fi in track.files.items():
+            f.write(f'[{fclass}]({os.path.join("files", fi)})\n\n')
 
 
 def export_table(tracks):
