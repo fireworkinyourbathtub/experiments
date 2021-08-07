@@ -17,6 +17,8 @@ PyYAML is needed to run the tracklist generation script.
 
 '''
 
+# as of Python 3.7, dictionaries remember insertion order, so the links in the table and in the readmes will be generated in this order
+# https://stackoverflow.com/questions/39980323/are-dictionaries-ordered-in-python-3-6
 ext_classifications = {
     '.band': 'GarageBand multitrack project file',
     '.mp3': 'mp3 audio file',
