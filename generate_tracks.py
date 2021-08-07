@@ -18,8 +18,8 @@ PyYAML is needed to run the tracklist generation script.
 '''
 
 ext_classifications = {
-    '.mp3': 'mp3 audio file',
     '.band': 'GarageBand multitrack project file',
+    '.mp3': 'mp3 audio file',
     '.flac': 'flac audio file',
 }
 
