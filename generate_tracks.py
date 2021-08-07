@@ -82,6 +82,7 @@ def generate_readme(track):
         f.write((f'# {track.number}: {track.name}\n'
                   '\n'
                  f'finished: {"yes" if track.finished else "no"}\n'
+                  '\n'
                  f'made with {track.made_with}\n'
                   '\n'
                  f'{track.description}\n'

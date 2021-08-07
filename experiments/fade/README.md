@@ -1,6 +1,7 @@
 # 3: Fades
 
 finished: yes
+
 made with GarageBand
 
 An experiment in the usage of crossfades.
