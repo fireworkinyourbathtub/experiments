@@ -85,6 +85,7 @@ def generate_readme(track):
                   '\n'
                  f'made with {track.made_with}\n'
                   '\n'
+                  '---\n'
                  f'{track.description}\n'
                   '\n'))
 

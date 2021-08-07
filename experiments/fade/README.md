@@ -4,6 +4,7 @@ finished: yes
 
 made with GarageBand
 
+---
 An experiment in the usage of crossfades.
 
 Beginning with a short and quickly repeating electric piano melody, a drum beat begins.

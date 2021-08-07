@@ -4,6 +4,7 @@ finished: yes
 
 made with GarageBand
 
+---
 After a bad, abandoned sequel, the threequel has a number of sections, starting with a piano intro.
 Then comes a section with some things, which cuts to a simpler, more acoustic section with 3/4 over 4/4 polymeter
 After that the trombones bring us into the next section with unaligned, seemingly random and chaotic drumming, as a piano plays a sports montage-esque inspirational tune.
