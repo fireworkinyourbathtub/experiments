@@ -7,6 +7,7 @@ EXPERIMENTS_DIR = 'experiments'
 ext_classifications = {
     '.mp3': 'mp3 audio file',
     '.aiff': 'aiff audio file',
+    '.band': 'GarageBand multitrack project file'
 }
 
 class Track:

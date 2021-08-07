@@ -12,7 +12,4 @@ description: |
   Then, the synths are replaced with noise as a simple beat begins, which suddenly then ends, leading to a final section with the original melodies.
 
 made-with: GarageBand
-finished: false
-
-todo:
-  - add files
+finished: true

@@ -1,8 +1,8 @@
 # Tracks
 
-|Number|Name|Finished|Made with|mp3 audio file|aiff audio file|
-|-:|-|-|-|-|-|
-|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|GarageBand|[file](experiments/mastitgfl/files/mastitgfl.mp3)||
-|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|GarageBand||[file](experiments/mastitgfl3/files/mastitgfl3.aiff)|
-|3|[Fades](experiments/fade)|no|GarageBand|||
-|4|[Chicken](experiments/chicken)|no|GarageBand|||
+|Number|Name|Finished|Made with|mp3 audio file|aiff audio file|GarageBand multitrack project file|
+|-:|-|-|-|-|-|-|
+|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|GarageBand|[file](experiments/mastitgfl/files/mastitgfl.mp3)|||
+|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|GarageBand||[file](experiments/mastitgfl3/files/mastitgfl3.aiff)|[file](experiments/mastitgfl3/files/mastitgfl3.band)|
+|3|[Fades](experiments/fade)|yes|GarageBand||[file](experiments/fade/files/fade.aiff)|[file](experiments/fade/files/fade.band)|
+|4|[Chicken](experiments/chicken)|yes|GarageBand||[file](experiments/chicken/files/chicken.aiff)|[file](experiments/chicken/files/chicken.band)|
