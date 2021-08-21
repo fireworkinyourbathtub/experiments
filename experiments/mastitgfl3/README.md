@@ -12,7 +12,7 @@ Suddenly everything cuts out except for a drum playing a marching band rhythm, w
 It builds up, and then winds down by removing instruments until all that is left are strings that are wildly glissandoing up and down.
 This brings us into the final section with just a lonely piano and other ambient noises playing a quieter, more reflective melody. It eventually is replaced with distant bells and an annoying drone which finish the track creepily.
 
-
+---
 [GarageBand multitrack project file](files/mastitgfl3.band)
 
 [flac audio file](files/mastitgfl3.flac)

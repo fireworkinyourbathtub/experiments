@@ -11,15 +11,15 @@ PyYAML is needed to run the tracklist generation script.
 
 ## Tracks
 
-|Number|Name|Finished|Made with|GarageBand multitrack project file|mp3 audio file|flac audio file|
-|-:|-|-|-|-|-|-|
-|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|GarageBand||[file](experiments/mastitgfl/files/mastitgfl.mp3)||
-|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|GarageBand|[file](experiments/mastitgfl3/files/mastitgfl3.band)||[file](experiments/mastitgfl3/files/mastitgfl3.flac)|
-|3|[Fades](experiments/fade)|yes|GarageBand|[file](experiments/fade/files/fade.band)||[file](experiments/fade/files/fade.flac)|
-|4|[Chicken](experiments/chicken)|yes|GarageBand|[file](experiments/chicken/files/chicken.band)||[file](experiments/chicken/files/chicken.flac)|
-|5|[Pipes](experiments/pipes)|no|GarageBand||||
-|6|[Sector](experiments/sector)|no|GarageBand||||
-|7|[Polygon](experiments/polygon)|no|GarageBand||||
-|8|[In The Middle](experiments/middle)|no|GarageBand||||
-|9|[Skip](experiments/skip)|no|GarageBand||||
-|10|[Making Soup](experiments/soup)|yes|GarageBand|[file](experiments/soup/files/soup.band)||[file](experiments/soup/files/soup.flac)|
+|Number|Name|Finished|GarageBand multitrack project file|mp3 audio file|flac audio file|
+|-:|-|-|-|-|-|
+|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes||[file](experiments/mastitgfl/files/mastitgfl.mp3)||
+|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|[file](experiments/mastitgfl3/files/mastitgfl3.band)||[file](experiments/mastitgfl3/files/mastitgfl3.flac)|
+|3|[Fades](experiments/fade)|yes|[file](experiments/fade/files/fade.band)||[file](experiments/fade/files/fade.flac)|
+|4|[Chicken](experiments/chicken)|yes|[file](experiments/chicken/files/chicken.band)||[file](experiments/chicken/files/chicken.flac)|
+|5|[Pipes](experiments/pipes)|no||||
+|6|[Sector](experiments/sector)|no||||
+|7|[Polygon](experiments/polygon)|no||||
+|8|[In The Middle](experiments/middle)|no||||
+|9|[Skip](experiments/skip)|no||||
+|10|[Making Soup](experiments/soup)|yes|[file](experiments/soup/files/soup.band)||[file](experiments/soup/files/soup.flac)|

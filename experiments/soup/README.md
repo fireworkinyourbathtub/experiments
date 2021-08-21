@@ -5,8 +5,9 @@ finished: yes
 made with GarageBand
 
 ---
-TODO
+No description
 
+---
 [flac audio file](files/soup.flac)
 
 [GarageBand multitrack project file](files/soup.band)
