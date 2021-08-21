@@ -21,5 +21,5 @@ PyYAML is needed to run the tracklist generation script.
 |6|[Sector](experiments/sector)|no||||
 |7|[Polygon](experiments/polygon)|no||||
 |8|[In The Middle](experiments/middle)|no||||
-|9|[Skip](experiments/skip)|no||||
+|9|[Skip](experiments/skip)|yes|[file](experiments/skip/files/skip.band)||[file](experiments/skip/files/skip.flac)|
 |10|[Making Soup](experiments/soup)|yes|[file](experiments/soup/files/soup.band)||[file](experiments/soup/files/soup.flac)|
