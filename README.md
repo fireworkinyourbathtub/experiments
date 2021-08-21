@@ -22,4 +22,4 @@ PyYAML is needed to run the tracklist generation script.
 |7|[Polygon](experiments/polygon)|no|GarageBand||||
 |8|[In The Middle](experiments/middle)|no|GarageBand||||
 |9|[Skip](experiments/skip)|no|GarageBand||||
-|10|[Making Soup](experiments/soup)|no|GarageBand||||
+|10|[Making Soup](experiments/soup)|yes|GarageBand|[file](experiments/soup/files/soup.band)||[file](experiments/soup/files/soup.flac)|
