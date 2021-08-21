@@ -19,3 +19,7 @@ PyYAML is needed to run the tracklist generation script.
 |4|[Chicken](experiments/chicken)|yes|GarageBand|[file](experiments/chicken/files/chicken.band)||[file](experiments/chicken/files/chicken.flac)|
 |5|[Pipes](experiments/pipes)|no|GarageBand||||
 |6|[Sector](experiments/sector)|no|GarageBand||||
+|7|[Polygon](experiments/polygon)|no|GarageBand||||
+|8|[In The Middle](experiments/middle)|no|GarageBand||||
+|9|[Skip](experiments/skip)|no|GarageBand||||
+|10|[Making Soup](experiments/soup)|no|GarageBand||||
