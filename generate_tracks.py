@@ -114,7 +114,9 @@ def generate_readme(track):
                  f'made with {track.made_with}\n'
                   '\n'
                   '---\n'
+                  '\n'
                  f'{track.description}\n'
+                  '\n'
                   '---\n'))
 
         for fclass, fi in track.files.items():
