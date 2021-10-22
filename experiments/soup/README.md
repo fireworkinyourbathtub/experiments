@@ -10,7 +10,6 @@ No description
 
 
 ---
-[flac audio file](files/soup.flac)
-
-[GarageBand multitrack project file](files/soup.band)
-
+## files
+- [soup.flac](files/soup.flac)
+- [soup.band](files/soup.band)

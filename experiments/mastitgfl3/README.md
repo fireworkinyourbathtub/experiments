@@ -15,7 +15,6 @@ This brings us into the final section with just a lonely piano and other ambient
 
 
 ---
-[GarageBand multitrack project file](files/mastitgfl3.band)
-
-[flac audio file](files/mastitgfl3.flac)
-
+## files
+- [mastitgfl3.band](files/mastitgfl3.band)
+- [mastitgfl3.flac](files/mastitgfl3.flac)

@@ -17,7 +17,6 @@ Then, the synths are replaced with noise as a simple beat begins, which suddenly
 
 
 ---
-[GarageBand multitrack project file](files/fade.band)
-
-[flac audio file](files/fade.flac)
-
+## files
+- [fade.band](files/fade.band)
+- [fade.flac](files/fade.flac)

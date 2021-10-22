@@ -10,7 +10,6 @@ No description
 
 
 ---
-[GarageBand multitrack project file](files/skip.band)
-
-[flac audio file](files/skip.flac)
-
+## files
+- [skip.band](files/skip.band)
+- [skip.flac](files/skip.flac)

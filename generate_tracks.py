@@ -1,6 +1,7 @@
 import os
 import sys
 import yaml
+import re
 
 # constants {{{1
 EXPERIMENTS_DIR = 'experiments'
@@ -18,19 +19,18 @@ PyYAML is needed to run the tracklist generation script.
 
 '''
 
-# as of Python 3.7, dictionaries remember insertion order, so the links in the table and in the readmes will be generated in this order
-# https://stackoverflow.com/questions/39980323/are-dictionaries-ordered-in-python-3-6
-EXT_CLASSIFICATIONS = {
-    '.band': 'GarageBand multitrack project file',
-    '.mp3': 'mp3 audio file',
-    '.flac': 'flac audio file',
+FILE_CLASSIFICATIONS = {
+    re.compile(r'final.(mp3|flac)'): 'final track',
+    re.compile(r'final.(band|mmpz)'): 'final multitrack',
 }
+
 # Track class {{{1
 class Track:
     def __init__(self, dir_name):
         self.dir_name = dir_name
         self.experiment_dir = os.path.join(EXPERIMENTS_DIR, dir_name)
-        self.files = {}
+        self.categorized_files = {}
+        self.other_files = []
 
         self.__read_metadata()
         self.__categorize_files()
@@ -68,17 +68,13 @@ class Track:
             raise Exception(f"track '{self.dir_name}' is missing metadata file at '{self.metadata_file}'")
 
     def __categorize_files(self):
-        for f in os.listdir(os.path.join(self.experiment_dir, 'files')):
-            name, ext = os.path.splitext(f)
+        for file_name in os.listdir(os.path.join(self.experiment_dir, 'files')):
+            for (file_re, file_classification) in FILE_CLASSIFICATIONS.items():
+                if file_re.fullmatch(file_name):
+                    self.categorized_files[file_classification] = file_name
+                    break
 
-            assert name == self.dir_name, f"track file '{f}' does not have the same name as folder '{self.dir_name}'"
-
-            ext_classification = EXT_CLASSIFICATIONS[ext]
-
-            if ext_classification in self.files:
-                raise Exception("track '{self.dir_name}' has two files classified as '{ext_classification}'")
-            else:
-                self.files[ext_classification] = f
+            self.other_files.append(file_name)
 
 # read tracks {{{1
 def read_tracks():
@@ -117,27 +113,34 @@ def generate_readme(track):
                   '\n'
                  f'{track.description}\n'
                   '\n'
-                  '---\n'))
+                  '---\n'
+                  '## files\n'))
 
-        for fclass, fi in track.files.items():
-            f.write(f'[{fclass}]({os.path.join("files", fi)})\n\n')
-
+        for fclass, fi in track.categorized_files.items():
+            f.write(f'- [{fclass} ({fi})]({os.path.join("files", fi)})\n')
+        for fi in track.other_files:
+            f.write(f'- [{fi}]({os.path.join("files", fi)})\n')
 
 def export_table(tracks):
-    file_cls = list(EXT_CLASSIFICATIONS.values())
-    cols = ['Number', 'Name', 'Finished'] + file_cls
+    cols = ['Number', 'Name', 'Finished', 'Files']
 
-    header_row = '|' + '|'.join(cols) + '|\n'
-    delimiter_row = '|' + '|'.join(['-:' if col == 'Number' else '-' for col in cols]) + '|\n'
+    header_row    = '|Number|Name|Finished|Files|\n'
+    delimiter_row = '|-----:|----|--------|-----|\n'
 
     rows = [header_row, delimiter_row]
 
     # TODO: add track length to table
     for (_, track) in sorted(tracks.items(), key=lambda x: x[0]):
         track_readme_path = os.path.join(EXPERIMENTS_DIR, track.dir_name)
-        row_beginning = f'{track.number}|[{track.name}]({track_readme_path})|{"yes" if track.finished else "no"}'
-        row_files = '|'.join([f'[file]({os.path.join(track.experiment_dir, "files", track.files[cl])})' if cl in track.files else '' for cl in file_cls])
-        rows.append(f'|{row_beginning}|{row_files}|\n')
+
+        row_files = [f'[{category} ({file_name})]({os.path.join(track.experiment_dir, "files", file_name)})' for (category, file_name) in track.categorized_files.items()] + \
+                    [f'[{file_name}]({os.path.join(track.experiment_dir, "files", file_name)})' for file_name in track.other_files]
+
+        row_files_str = ', '.join(row_files)
+
+        row = f'|{track.number}|[{track.name}]({track_readme_path})|{"yes" if track.finished else "no"}|{row_files_str}|\n'
+
+        rows.append(row)
 
     with open('README.md', 'w') as f:
         f.write(README_INFO)
