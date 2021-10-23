@@ -89,6 +89,9 @@ class Track:
             if not found_classification:
                 self.other_files.append(file_name)
 
+# utilities {{{1
+def escape_file_path(path):
+    return path.replace(' ', '%20')
 # read tracks {{{1
 def read_tracks() -> Dict[int, Track]:
     tracks: Dict[int, Track] = {}
@@ -131,9 +134,9 @@ def generate_readme(track: Track) -> None:
                   '## Files\n'))
 
         for fclass, fi in track.categorized_files.items():
-            f.write(f'- [{fclass} ({fi})]({os.path.join("files", fi)})\n')
+            f.write(f'- [{fclass} ({fi})]({escape_file_path(os.path.join("files", fi))})\n')
         for fi in track.other_files:
-            f.write(f'- [{fi}]({os.path.join("files", fi)})\n')
+            f.write(f'- [{fi}]({escape_file_path(os.path.join("files", fi))})\n')
 
 def export_table(tracks: Dict[int, Track]) -> None:
     cols = ['Number', 'Name', 'Finished', 'Files']
@@ -147,12 +150,12 @@ def export_table(tracks: Dict[int, Track]) -> None:
     for (_, track) in sorted(tracks.items(), key=lambda x: x[0]):
         track_readme_path = os.path.join(EXPERIMENTS_DIR, track.dir_name)
 
-        row_files = [f'[{category} ({file_name})]({os.path.join(track.experiment_dir, "files", file_name)})' for (category, file_name) in track.categorized_files.items()] + \
-                    [f'[{file_name}]({os.path.join(track.experiment_dir, "files", file_name)})' for file_name in track.other_files]
+        row_files = [f'[{category} ({file_name})]({escape_file_path(os.path.join(track.experiment_dir, "files", file_name))})' for (category, file_name) in track.categorized_files.items()] + \
+                    [f'[{file_name}]({escape_file_path(os.path.join(track.experiment_dir, "files", file_name))})' for file_name in track.other_files]
 
         row_files_str = ', '.join(row_files)
 
-        row = f'|{track.number}|[{track.name}]({track_readme_path})|{"yes" if track.finished else "no"}|{row_files_str}|\n'
+        row = f'|{track.number}|[{track.name}]({escape_file_path(track_readme_path)})|{"yes" if track.finished else "no"}|{row_files_str}|\n'
 
         rows.append(row)
 
