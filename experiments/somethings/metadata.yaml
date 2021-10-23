@@ -1,0 +1,8 @@
+name: Some Things
+number: 11
+
+description: |
+  A piano piece with 7 sections called Things
+
+made-with: Lilypond
+finished: true

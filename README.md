@@ -23,3 +23,5 @@ PyYAML is needed to run the tracklist generation script.
 |8|[In The Middle](experiments/middle)|no||
 |9|[Skip](experiments/skip)|yes|[final track (final.flac)](experiments/skip/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/skip/files/finalmultitrack.tar.gz)|
 |10|[Making Soup](experiments/soup)|yes|[final track (final.flac)](experiments/soup/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/soup/files/finalmultitrack.tar.gz)|
+|11|[Some Things](experiments/somethings)|yes|[final Lilypond score (final.ly)](experiments/somethings/files/final.ly)|
+|12|[Another Thing](experiments/anotherthing)|no|[part1.mscz](experiments/anotherthing/files/part1.mscz), [wavering tone.wav](experiments/anotherthing/files/wavering tone.wav), [part2.mmpz](experiments/anotherthing/files/part2.mmpz), [wavering e2.wav](experiments/anotherthing/files/wavering e2.wav), [violin thingy.mscz](experiments/anotherthing/files/violin thingy.mscz)|

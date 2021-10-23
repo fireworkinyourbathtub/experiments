@@ -23,6 +23,7 @@ PyYAML is needed to run the tracklist generation script.
 
 FILE_CLASSIFICATIONS = {
     re.compile(r'final.(mp3|flac)'): 'final track',
+    re.compile(r'final.ly'): 'final Lilypond score',
     re.compile(r'final.(band|mmpz)'): 'final multitrack',
     re.compile(r'finalmultitrack.tar.gz'): 'compressed archive of GarageBand multitrack',
     re.compile(r'finalmultitrack.zip'): 'zipped GarageBand multitrack',
@@ -115,11 +116,13 @@ def check_track_keys(tracks: Dict[int, Track]) -> None:
 # generating things {{{1
 def generate_readme(track: Track) -> None:
     with open(os.path.join(EXPERIMENTS_DIR, track.dir_name, 'README.md'), 'w') as f:
+        made_with_str = ', '.join(track.made_with) if isinstance(track.made_with, list) else track.made_with
+
         f.write((f'# {track.number}: {track.name}\n'
                   '\n'
                  f'finished: {"yes" if track.finished else "no"}\n'
                   '\n'
-                 f'made with {track.made_with}\n'
+                 f'made with {made_with_str}\n'
                   '\n'
                   '## Description\n'
                   '\n'

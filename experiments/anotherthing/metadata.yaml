@@ -1,0 +1,11 @@
+name: Another Thing
+number: 12
+
+description: |
+  A sequel to Some Things with two sections.
+
+made-with: 
+  - MuseScore
+  - LMMS
+
+finished: false
