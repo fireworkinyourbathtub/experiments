@@ -4,9 +4,9 @@ finished: yes
 
 made with GarageBand
 
-## description
+## Description
 
 A relatively short song where I just did random things
 
-## files
+## Files
 - [final track (final.mp3)](files/final.mp3)

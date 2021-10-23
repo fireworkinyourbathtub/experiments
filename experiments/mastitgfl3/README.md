@@ -4,7 +4,7 @@ finished: yes
 
 made with GarageBand
 
-## description
+## Description
 
 After a bad, abandoned sequel, the threequel has a number of sections, starting with a piano intro.
 Then comes a section with some things, which cuts to a simpler, more acoustic section with 3/4 over 4/4 polymeter
@@ -13,6 +13,6 @@ Suddenly everything cuts out except for a drum playing a marching band rhythm, w
 It builds up, and then winds down by removing instruments until all that is left are strings that are wildly glissandoing up and down.
 This brings us into the final section with just a lonely piano and other ambient noises playing a quieter, more reflective melody. It eventually is replaced with distant bells and an annoying drone which finish the track creepily.
 
-## files
+## Files
 - [final track (final.flac)](files/final.flac)
 - [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](files/finalmultitrack.tar.gz)
