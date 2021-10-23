@@ -19,4 +19,4 @@ Then, the synths are replaced with noise as a simple beat begins, which suddenly
 ---
 ## files
 - [final track (final.flac)](files/final.flac)
-- [final multitrack (final.band)](files/final.band)
+- [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](files/finalmultitrack.tar.gz)

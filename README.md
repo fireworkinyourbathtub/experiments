@@ -14,12 +14,12 @@ PyYAML is needed to run the tracklist generation script.
 |Number|Name|Finished|Files|
 |-----:|----|--------|-----|
 |1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|[final track (final.mp3)](experiments/mastitgfl/files/final.mp3)|
-|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|[final track (final.flac)](experiments/mastitgfl3/files/final.flac), [final multitrack (final.band)](experiments/mastitgfl3/files/final.band)|
-|3|[Fades](experiments/fade)|yes|[final track (final.flac)](experiments/fade/files/final.flac), [final multitrack (final.band)](experiments/fade/files/final.band)|
-|4|[Chicken](experiments/chicken)|yes|[final track (final.flac)](experiments/chicken/files/final.flac), [final multitrack (final.band)](experiments/chicken/files/final.band)|
+|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|[final track (final.flac)](experiments/mastitgfl3/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/mastitgfl3/files/finalmultitrack.tar.gz)|
+|3|[Fades](experiments/fade)|yes|[final track (final.flac)](experiments/fade/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/fade/files/finalmultitrack.tar.gz)|
+|4|[Chicken](experiments/chicken)|yes|[final track (final.flac)](experiments/chicken/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/chicken/files/finalmultitrack.tar.gz)|
 |5|[Pipes](experiments/pipes)|no||
 |6|[Sector](experiments/sector)|no||
 |7|[Polygon](experiments/polygon)|no||
 |8|[In The Middle](experiments/middle)|no||
-|9|[Skip](experiments/skip)|yes|[final track (final.flac)](experiments/skip/files/final.flac), [final multitrack (final.band)](experiments/skip/files/final.band)|
-|10|[Making Soup](experiments/soup)|yes|[final track (final.flac)](experiments/soup/files/final.flac), [final multitrack (final.band)](experiments/soup/files/final.band)|
+|9|[Skip](experiments/skip)|yes|[final track (final.flac)](experiments/skip/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/skip/files/finalmultitrack.tar.gz)|
+|10|[Making Soup](experiments/soup)|yes|[final track (final.flac)](experiments/soup/files/final.flac), [compressed archive of GarageBand multitrack (finalmultitrack.tar.gz)](experiments/soup/files/finalmultitrack.tar.gz)|
