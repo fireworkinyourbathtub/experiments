@@ -16,5 +16,5 @@ This brings us into the final section with just a lonely piano and other ambient
 
 ---
 ## files
-- [mastitgfl3.band](files/mastitgfl3.band)
-- [mastitgfl3.flac](files/mastitgfl3.flac)
+- [final track (final.flac)](files/final.flac)
+- [final multitrack (final.band)](files/final.band)

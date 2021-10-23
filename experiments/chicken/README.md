@@ -10,5 +10,5 @@ A track with a more pop-oriented verse-chorus structure, but still entirely inst
 
 ---
 ## files
-- [chicken.flac](files/chicken.flac)
-- [chicken.band](files/chicken.band)
+- [final track (final.flac)](files/final.flac)
+- [final multitrack (final.band)](files/final.band)

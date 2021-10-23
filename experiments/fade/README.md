@@ -18,5 +18,5 @@ Then, the synths are replaced with noise as a simple beat begins, which suddenly
 
 ---
 ## files
-- [fade.band](files/fade.band)
-- [fade.flac](files/fade.flac)
+- [final track (final.flac)](files/final.flac)
+- [final multitrack (final.band)](files/final.band)

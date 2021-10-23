@@ -11,5 +11,5 @@ No description
 
 ---
 ## files
-- [soup.flac](files/soup.flac)
-- [soup.band](files/soup.band)
+- [final track (final.flac)](files/final.flac)
+- [final multitrack (final.band)](files/final.band)

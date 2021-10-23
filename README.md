@@ -13,13 +13,13 @@ PyYAML is needed to run the tracklist generation script.
 
 |Number|Name|Finished|Files|
 |-----:|----|--------|-----|
-|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|[mastitgfl.mp3](experiments/mastitgfl/files/mastitgfl.mp3)|
-|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|[mastitgfl3.band](experiments/mastitgfl3/files/mastitgfl3.band), [mastitgfl3.flac](experiments/mastitgfl3/files/mastitgfl3.flac)|
-|3|[Fades](experiments/fade)|yes|[fade.band](experiments/fade/files/fade.band), [fade.flac](experiments/fade/files/fade.flac)|
-|4|[Chicken](experiments/chicken)|yes|[chicken.flac](experiments/chicken/files/chicken.flac), [chicken.band](experiments/chicken/files/chicken.band)|
+|1|[My Amazing Song that is too Good for Life](experiments/mastitgfl)|yes|[final track (final.mp3)](experiments/mastitgfl/files/final.mp3)|
+|2|[My Amazing Song that is too Good for Life 3](experiments/mastitgfl3)|yes|[final track (final.flac)](experiments/mastitgfl3/files/final.flac), [final multitrack (final.band)](experiments/mastitgfl3/files/final.band)|
+|3|[Fades](experiments/fade)|yes|[final track (final.flac)](experiments/fade/files/final.flac), [final multitrack (final.band)](experiments/fade/files/final.band)|
+|4|[Chicken](experiments/chicken)|yes|[final track (final.flac)](experiments/chicken/files/final.flac), [final multitrack (final.band)](experiments/chicken/files/final.band)|
 |5|[Pipes](experiments/pipes)|no||
 |6|[Sector](experiments/sector)|no||
 |7|[Polygon](experiments/polygon)|no||
 |8|[In The Middle](experiments/middle)|no||
-|9|[Skip](experiments/skip)|yes|[skip.band](experiments/skip/files/skip.band), [skip.flac](experiments/skip/files/skip.flac)|
-|10|[Making Soup](experiments/soup)|yes|[soup.flac](experiments/soup/files/soup.flac), [soup.band](experiments/soup/files/soup.band)|
+|9|[Skip](experiments/skip)|yes|[final track (final.flac)](experiments/skip/files/final.flac), [final multitrack (final.band)](experiments/skip/files/final.band)|
+|10|[Making Soup](experiments/soup)|yes|[final track (final.flac)](experiments/soup/files/final.flac), [final multitrack (final.band)](experiments/soup/files/final.band)|

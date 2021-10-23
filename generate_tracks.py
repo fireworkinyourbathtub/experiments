@@ -73,12 +73,18 @@ class Track:
 
     def __categorize_files(self) -> None:
         for file_name in os.listdir(os.path.join(self.experiment_dir, 'files')):
+            found_classification = False
             for (file_re, file_classification) in FILE_CLASSIFICATIONS.items():
                 if file_re.fullmatch(file_name):
+                    if file_classification in self.categorized_files:
+                        raise Exception(f"track '{self.dir_name}' has multiple files with classification {file_classification}")
+
                     self.categorized_files[file_classification] = file_name
+                    found_classification = True
                     break
 
-            self.other_files.append(file_name)
+            if not found_classification:
+                self.other_files.append(file_name)
 
 # read tracks {{{1
 def read_tracks() -> Dict[int, Track]:
