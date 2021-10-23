@@ -3,6 +3,8 @@ import sys
 import yaml
 import re
 
+from typing import Dict, List, Any
+
 # constants {{{1
 EXPERIMENTS_DIR = 'experiments'
 
@@ -26,21 +28,23 @@ FILE_CLASSIFICATIONS = {
 
 # Track class {{{1
 class Track:
-    def __init__(self, dir_name):
+    def __init__(self, dir_name: str):
         self.dir_name = dir_name
         self.experiment_dir = os.path.join(EXPERIMENTS_DIR, dir_name)
-        self.categorized_files = {}
-        self.other_files = []
+
+        self.metadata_file = os.path.join(self.experiment_dir, 'metadata.yaml')
+        self.categorized_files: Dict[str, str] = {}
+        self.other_files: List[str] = []
 
         self.__read_metadata()
         self.__categorize_files()
 
-    def __read_metadata(self):
+    def __read_metadata(self) -> None:
         try:
-            with open(os.path.join(self.experiment_dir, 'metadata.yaml'), 'r') as f:
-                metadata = yaml.full_load(f)
+            with open(self.metadata_file, 'r') as f:
+                metadata: Dict[str, Any] = yaml.full_load(f)
 
-                def read_from_metadata(key):
+                def read_from_metadata(key: str) -> Any:
                     if key in metadata:
                         return metadata[key]
                     else:
@@ -67,7 +71,7 @@ class Track:
         except FileNotFoundError as exc:
             raise Exception(f"track '{self.dir_name}' is missing metadata file at '{self.metadata_file}'")
 
-    def __categorize_files(self):
+    def __categorize_files(self) -> None:
         for file_name in os.listdir(os.path.join(self.experiment_dir, 'files')):
             for (file_re, file_classification) in FILE_CLASSIFICATIONS.items():
                 if file_re.fullmatch(file_name):
@@ -77,8 +81,8 @@ class Track:
             self.other_files.append(file_name)
 
 # read tracks {{{1
-def read_tracks():
-    tracks = {}
+def read_tracks() -> Dict[int, Track]:
+    tracks: Dict[int, Track] = {}
     for track_dir in os.listdir('experiments'):
         track = Track(track_dir)
 
@@ -89,7 +93,7 @@ def read_tracks():
 
     return tracks
 # check tracks {{{1
-def check_track_keys(tracks):
+def check_track_keys(tracks: Dict[int, Track]) -> None:
     track_keys = sorted(list(tracks.keys()))
     last_key, track_keys = track_keys[0], track_keys[1:]
 
@@ -101,7 +105,7 @@ def check_track_keys(tracks):
 
         last_key = i
 # generating things {{{1
-def generate_readme(track):
+def generate_readme(track: Track) -> None:
     with open(os.path.join(EXPERIMENTS_DIR, track.dir_name, 'README.md'), 'w') as f:
         f.write((f'# {track.number}: {track.name}\n'
                   '\n'
@@ -121,7 +125,7 @@ def generate_readme(track):
         for fi in track.other_files:
             f.write(f'- [{fi}]({os.path.join("files", fi)})\n')
 
-def export_table(tracks):
+def export_table(tracks: Dict[int, Track]) -> None:
     cols = ['Number', 'Name', 'Finished', 'Files']
 
     header_row    = '|Number|Name|Finished|Files|\n'
