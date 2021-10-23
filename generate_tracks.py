@@ -121,11 +121,10 @@ def generate_readme(track: Track) -> None:
                   '\n'
                  f'made with {track.made_with}\n'
                   '\n'
-                  '---\n'
+                  '## description\n'
                   '\n'
-                 f'{track.description}\n'
+                 f'{track.description}'
                   '\n'
-                  '---\n'
                   '## files\n'))
 
         for fclass, fi in track.categorized_files.items():
