@@ -24,6 +24,8 @@ PyYAML is needed to run the tracklist generation script.
 FILE_CLASSIFICATIONS = {
     re.compile(r'final.(mp3|flac)'): 'final track',
     re.compile(r'final.(band|mmpz)'): 'final multitrack',
+    re.compile(r'finalmultitrack.tar.gz'): 'compressed archive of GarageBand multitrack',
+    re.compile(r'finalmultitrack.zip'): 'zipped GarageBand multitrack',
 }
 
 # Track class {{{1
